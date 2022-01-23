@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de imigrção</title>
+</head>
+<body>
+    <h1>Departamento de Imigração</h1>
+    Digite seu país de origem: <input type="text"
+    name="textpaís" id="txtpaís">
+    <input type ="button" value ="verificar nacionalidade"
+    onclick ="verNac()">
+    <div id="nac">
+
+    </div>
+
+    <script>
+        function verNac() {
+            var origem = window.document.getElementById('textpaís')
+            var nac = window.document.getElementById('nac')
+            var país = string(origem.value)
+            nac.innerHTML =`<p> Seu país de origem é ${país}.</p>.`
+            if (país == 'Brasil') {
+            nac.innerTextHTML += '<p>Você é Brasileiro</p>.'
+            } else {
+            nac.innerTextHTML +='<p>Você é estrangeiro</p>.'
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>

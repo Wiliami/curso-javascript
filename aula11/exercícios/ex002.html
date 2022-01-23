@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times do Brasil</title>
+        <style>
+            body{
+                font: normal 14pt Arial;
+                background: white;
+                color:orange;
+            }
+            h1 {
+                color: orange;
+            }
+
+        </style>
+</head>
+<body>
+    <h1>Qual o seu time do Coração?</h1>
+    Qual o seu time? : <input type="string" name="texttim" id="txttim"> FC
+    <input type="button" value="verificar" onclick="analisar()">
+    <div id="res">
+
+    </div>  
+
+        <script>
+            function analisar () {
+            var txtt = window.document.querySelector('input#txttim') //Esse aqui vai pegar o id do primeiro input
+            var res = window.document.querySelector('div#res') //Esse vai pegar a <div id+"res">
+            var tim = String(txttim.value) // Esse aqui cria a variável e qual o seu tipo primitivo
+            res.innerHTML = `<p> Nome do seu time é:<strong> ${tim} FC </strong>  </p>`
+            if (tim == "Flamengo") {
+                res.innerHTML += '<p> <strong>Flamengo</strong> é o Melhor time do Brasil!</p>'
+                res.innerHTML += '<P>Parabéns, você tem bom gosto!</P>'
+            } else {
+                res.innerHTML += '<p> Desculpa-me, mas você não tem bom gosto!</p>'
+            }
+                
+            
+                                
+            
+        }
+
+
+        </script>
+</body>
+</html>
